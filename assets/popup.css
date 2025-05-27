@@ -1,0 +1,17 @@
+.popupBackground {
+    display: flex;
+    justify-content: center;
+    
+}
+.popup_news {
+    background-color: antiquewhite;
+    padding: 2.5em;
+    margin: 1em;
+    border-radius: 20px;
+}
+.popup_article {
+    background-color: antiquewhite;
+    padding: 4em;
+    border-radius: 20px;
+    margin: 1em;
+}
