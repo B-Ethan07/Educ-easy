@@ -34,15 +34,20 @@ header > section {
     text-align: center;
     justify-content: center; 
 }
- .cta {
+.cta {
   display: inline-block;
   background: linear-gradient( #fcbc33, #ff9317);
   border-radius: 10px;
   border: 0;
  }
-button > .cta {
-    margin: 1rem, 0 ;
-}
+.ctaNav {
+  display: inline-block;
+  background: linear-gradient( #fcbc33, #ff9317);
+  border-radius: 10px;
+  border: 0;
+  margin: 1rem, 0 ;
+  box-shadow: 2px 1px 2px rgb(114, 114, 114);
+ }
 header > section > .cta {
     margin-top: 20px;
     padding: 10px 20px;
@@ -75,4 +80,17 @@ footer > ul > li {
     text-decoration: none;
     display: flex;
     margin: 0 0.5rem;
+}
+
+@media screen and (max-width: 575px) {
+    .ctaNav  {
+    padding: 0 auto;
+    background: none;
+    margin: 0 auto;
+
+}
+.titre {
+    display: none;
+      border: 5px solid rgb(87, 87, 87);
+}
 }
