@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+:root {
+    --border--wireframe: 1px solid black;
+}
+body {
+  margin: 0;
+  line-height: 1.5;
+  font-family: "Salsa", cursive;
+}
+.nav-item {
+    margin: 5px 5px;
+    padding: 5px;
+}
+.titre {
+    margin-top: 1.2rem;
+    margin-right: 3rem;
+}
+
+header {
+
+  background-image: url(./images/palette1.PNG);
+  color: rgba(255, 255, 255, 0.973);
+  border: var(--border--wireframe);
+  text-shadow: 1px 2px 5px rgb(192, 192, 192);
+  width: 100%;
+  height: 15rem;
+  margin: 0.5rem 0;
+  box-shadow: 2px 1px 2px rgb(192, 192, 192);
+}
+header > section {
+    margin-top: 5rem;
+    text-align: center;
+    justify-content: center; 
+}
+.cta {
+  display: inline-block;
+  background: linear-gradient( #fcbc33, #ff9317);
+  border-radius: 10px;
+  border: 0;
+  
+ }
+.ctaNav {
+  display: inline-block;
+  background: linear-gradient( #fcbc33, #ff9317);
+  border-radius: 10px;
+  border: 0;
+  margin: 1rem, 0 ;
+  box-shadow: 2px 1px 2px rgb(114, 114, 114);
+ }
+ .ctaNav:hover {
+  background: linear-gradient(#ffaf02, #fd8a07);
+  text-decoration: none;
+}
+header > section > .cta {
+    margin-top: 20px;
+    padding: 10px 15px;
+}
+section {
+    text-align: center;
+}
+section > button {
+    margin-top: 2em;
+    padding: 10px 15px;
+}
+.cta:hover {
+  background: linear-gradient(#ffaf02, #fd8a07);
+  text-decoration: none;
+}
+section>h2 {
+    text-align: center;
+    margin: 1rem;
+}
+article{
+    margin: 0 3em;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    margin-top: 3rem;
+    box-shadow: 0px 0px 10px 2px rgb(226, 226, 226);
+}
+footer > h6 {
+    margin-left: 7.5rem;
+}
+footer > ul {
+    display: flex;
+    text-decoration: none;
+}
+footer > ul > li {
+    text-decoration: none;
+    display: flex;
+    margin: 0 0.5rem;
+}
+.card-text {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: start;
+}
+
+@media screen and (max-width: 575px) {
+    .ctaNav  {
+    padding: 0 auto;
+    background: none;
+    margin: 0 auto;
+
+}
+.titre {
+    display: none;
+      border: 5px solid rgb(87, 87, 87);
+}
+#searchbar {
+    display: none;
+    width: 10;
+}
+article{
+    margin: 0 1em;
+}
+}

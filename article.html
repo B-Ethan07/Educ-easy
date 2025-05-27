@@ -12,7 +12,6 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
-
     <link rel="stylesheet" href="assets/style.css" />
     <title>Educ'easy</title>
   </head>
@@ -68,97 +67,81 @@
     </nav>
     <header>
       <section>
-        <h1 >Blog de conseil pour les parents</h1>
-        <button class="cta">Inscrivez vous à notre newsletter</button>
+        <h1>Articles</h1>
       </section>
     </header>
     <main>
-      <section>
-        <h2><strong>Articles</strong></h2>
-        <article>
-          <div class="row row-cols-1 row-cols-md-2 g-5 m-2">
+      <nav class="navbar shadow-sm" style="background-color: #ffffff">
+        <div class="container-fluid">
+          <select
+            class="form-select form-select-sm"
+            style="width: 30%"
+            aria-label="Small select example"
+          >
+            <option selected>Thèmes</option>
+            <option value="1">Activité</option>
+            <option value="2">Chanson</option>
+            <option value="3">Santé</option>
+            <option value="3">Alimentation</option>
+            <option value="3">Education</option>
+          </select>
+          <form  class="d-flex " role="search">
+            <input id="searchbar"
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              style="width: 10em; height: 2.2em;"
+            />
+            <button id="searchbar" class="btn btn-outline-warning" type="submit" style="width: 5em; height: 2.2em;">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+        <article>    
+            <div class="row row-cols-1 row-cols-md-1 g-5 m-2">
             <div class="col">
               <div class="card">
-                <img
-                  src="assets\images\peinture.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-
+                <img src="assets\images\peinture.jpg" class="card-img-top" alt="...">
+          
                 <div class="card-body shadow">
                   <h5 class="card-title">Article 1</h5>
-                  <p class="card-text">
-                    TLorem ipsum dolor sit amet consectetur. Sed maecenas a nunc
-                    senectus. Turpis at elit vitae risus metus. A vulputate nec
-                    lorem ut. Eu commodo euismod adipiscing donec amet risus
-                    nunc.
-                  </p>
+                  <p class="card-text">TLorem ipsum dolor sit amet consectetur. Sed maecenas a nunc senectus. Turpis at elit vitae risus metus. A vulputate nec lorem ut. Eu commodo euismod adipiscing donec amet risus nunc. </p>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card">
-                <img
-                  src="assets\images\selfie.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-
+                <img src="assets\images\selfie.jpg" class="card-img-top" alt="...">
+          
                 <div class="card-body shadow">
                   <h5 class="card-title">Article 2</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc
-                    senectus. Turpis at elit vitae risus metus. A vulputate nec
-                    lorem ut. Eu commodo euismod adipiscing donec amet risus
-                    nunc.
-                  </p>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc senectus. Turpis at elit vitae risus metus. A vulputate nec lorem ut. Eu commodo euismod adipiscing donec amet risus nunc. </p>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card">
-                <img
-                  src="assets\images\pexels-daiangan-102127 (1).jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-
+                <img src="assets\images\pexels-daiangan-102127 (1).jpg" class="card-img-top" alt="...">
+          
                 <div class="card-body shadow">
                   <h5 class="card-title">Article 3</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc
-                    senectus. Turpis at elit vitae risus metus. A vulputate nec
-                    lorem ut. Eu commodo euismod adipiscing donec amet risus
-                    nunc.
-                  </p>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc senectus. Turpis at elit vitae risus metus. A vulputate nec lorem ut. Eu commodo euismod adipiscing donec amet risus nunc.</p>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card">
-                <img
-                  src="assets\images\pexels-padrinan-194094.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-
+                <img src="assets\images\pexels-padrinan-194094.jpg" class="card-img-top" alt="...">
+          
                 <div class="card-body shadow">
                   <h5 class="card-title">Article 4</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc
-                    senectus. Turpis at elit vitae risus metus. A vulputate nec
-                    lorem ut. Eu commodo euismod adipiscing donec amet risus
-                    nunc.
-                  </p>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc senectus. Turpis at elit vitae risus metus. A vulputate nec lorem ut. Eu commodo euismod adipiscing donec amet risus nunc.</p>
                 </div>
               </div>
             </div>
-          </div>
-        </article>
-        <button class="cta">
-          <a class="nav-link" href="article.html"> More </a>
-        </button>
-      </section>
+            </div>
     </main>
     <footer>
       <img src="assets\images\logo.PNG" alt="logo" width="40" height="40" />
@@ -181,6 +164,7 @@
         </li>
       </ul>
     </footer>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
