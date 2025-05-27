@@ -8,7 +8,7 @@
     <title>Educ'easy</title>
 </head>
 <body>
-   <nav class="navbar navbar-expand-sm shadow" style="background-color: #ffffff;" >
+   <nav class="navbar sticky-top navbar-expand-sm shadow" style="background-color: #ffffff;" >
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -97,6 +97,34 @@
         <li><button class="cta"><img src="assets\images\linkedin.svg" alt="linkedin" /></button></li>
       </ul>
     </footer>
+           <!-- Popup newsletter -->
+    <div class="popupBackground">
+        <div class="popup_news">
+            <div>S'inscrire à la newsletter</div>
+            <form>
+                <label for="nom">Votre nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                <label for="email">Votre email</label>
+                <input type="email" id="email" name="email" placeholder="nom@domaine.com">
+                <button id="btnEnvoyerMail">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+           <!-- Popup Nouvel Article -->
+    <div class="popupBackground">
+        <div class="popup_article">
+            <div>S'inscrire à la newsletter</div>
+            <form>
+                <label for="titre">Titre: </label>
+                <input type="text" id="titreArticle" name="titreArticle" placeholder="Titre de l'Article..">
+                <label for="auteur">Votre email</label>
+                <input type="auteur" id="auteur" name="auteur" placeholder="Auteur..">
+                <label for="auteur">Votre email</label>
+                <input type="auteur" id="auteur" name="auteur" placeholder="Auteur..">
+                <button id="btnEnvoyerMail">S'inscrire</button>
+            </form>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 </html>
