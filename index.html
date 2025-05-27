@@ -17,15 +17,15 @@
           
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto sm-2 mb-lg-0">
-              <li class="nav-item"><strong>Educ'easy</strong></li>
+              <li class="titre"><strong>Educ'easy</strong></li>
               <li class="nav-item">
-                <button type="button" class="btn btn-warning"><a class="nav-link active" aria-current="page" href="#">Home</a></button>
+                <button type="button" class="cta"><a class="nav-link active" aria-current="page" href="#">Home</a></button>
               </li>
               <li class="nav-item">
-                <button type="button" class="btn btn-warning"><a class="nav-link" href="#">Articles</a></button>
+                <button type="button" class="cta"><a class="nav-link" href="#">Articles</a></button>
               </li>
-              <li class="nav-item">
-                <button type="button" class="btn btn-warning"><a class="nav-link" href="#">+</a></button>
+              <li class="nav-item" id="addarticle">
+                <button type="button" class="cta"><a class="nav-link" href="#"> + </a></button>
               </li>
             </ul>
           </div>
@@ -39,12 +39,62 @@
     </header>
     <main>
         <section>
-            <h2>Articles</h2>
+            <h2><strong>Articles</strong></h2>
+            <article>    
+            <div class="row row-cols-1 row-cols-md-2 g-5 m-2">
+            <div class="col">
+              <div class="card">
+                <img src="assets\images\peinture.jpg" class="card-img-top" alt="...">
+          
+                <div class="card-body shadow">
+                  <h5 class="card-title">Article 1</h5>
+                  <p class="card-text">TLorem ipsum dolor sit amet consectetur. Sed maecenas a nunc senectus. Turpis at elit vitae risus metus. A vulputate nec lorem ut. Eu commodo euismod adipiscing donec amet risus nunc. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="assets\images\selfie.jpg" class="card-img-top" alt="...">
+          
+                <div class="card-body shadow">
+                  <h5 class="card-title">Article 2</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc senectus. Turpis at elit vitae risus metus. A vulputate nec lorem ut. Eu commodo euismod adipiscing donec amet risus nunc. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="assets\images\pexels-daiangan-102127 (1).jpg" class="card-img-top" alt="...">
+          
+                <div class="card-body shadow">
+                  <h5 class="card-title">Article 3</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc senectus. Turpis at elit vitae risus metus. A vulputate nec lorem ut. Eu commodo euismod adipiscing donec amet risus nunc.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="assets\images\pexels-padrinan-194094.jpg" class="card-img-top" alt="...">
+          
+                <div class="card-body shadow">
+                  <h5 class="card-title">Article 4</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc senectus. Turpis at elit vitae risus metus. A vulputate nec lorem ut. Eu commodo euismod adipiscing donec amet risus nunc.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+        </article>
         </section>
 
     </main>
     <footer>
-
+      <img src="assets\images\logo.PNG" alt="logo" width="40" height="40">
+      <h6>CGU</h6>      
+      <ul>
+        <li><button class="cta"><img src="assets\images\facebook.svg" alt="facebook" /></button></li>
+        <li><button class="cta"><img src="assets\images\twitter.svg" alt="twitter" /></button></li>
+        <li><button class="cta"><img src="assets\images\linkedin.svg" alt="linkedin" /></button></li>
+      </ul>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
