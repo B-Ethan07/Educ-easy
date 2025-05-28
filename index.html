@@ -14,6 +14,7 @@
     />
 
     <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/popup.css">
     <title>Educ'easy</title>
   </head>
   <body>
@@ -59,7 +60,7 @@
             </li>
             <li class="nav-item" id="addarticle">
               <button type="button" class="ctaNav">
-                <a class="nav-link" href="#"> + </a>
+                <a class="nav-link" href="popups.html"> + </a>
               </button>
             </li>
           </ul>
@@ -69,7 +70,7 @@
     <header>
       <section>
         <h1 >Blog de conseil pour les parents</h1>
-        <button class="cta">Inscrivez vous à notre newsletter</button>
+        <button class="cta" id="btnPartage">Inscrivez vous à notre newsletter</button>
       </section>
     </header>
     <main>
@@ -82,7 +83,7 @@
                 <img
                   src="assets\images\peinture.jpg"
                   class="card-img-top"
-                  alt="..."
+                  alt="peinture et pinceau bleu"
                 />
 
                 <div class="card-body shadow">
@@ -101,7 +102,7 @@
                 <img
                   src="assets\images\selfie.jpg"
                   class="card-img-top"
-                  alt="..."
+                  alt="selfie d'une petite fille à la plage"
                 />
 
                 <div class="card-body shadow">
@@ -120,7 +121,7 @@
                 <img
                   src="assets\images\pexels-daiangan-102127 (1).jpg"
                   class="card-img-top"
-                  alt="..."
+                  alt="palette de couleur"
                 />
 
                 <div class="card-body shadow">
@@ -139,7 +140,7 @@
                 <img
                   src="assets\images\pexels-padrinan-194094.jpg"
                   class="card-img-top"
-                  alt="..."
+                  alt="bateaux en papier origami"
                 />
 
                 <div class="card-body shadow">
@@ -181,6 +182,34 @@
         </li>
       </ul>
     </footer>
+    <!-- Popup newsletter -->
+<div class="popupBackground">
+  <div class="popup_news">
+    <h4>S'inscrire à la newsletter</h4>
+    <form style="width: 26rem">
+
+    <div data-mdb-input-init class="form-outline m-4">
+      <label for="nom">Votre nom:</label>
+      <input type="text" id="nom" name="nom" placeholder="Votre nom" />
+    </div>
+
+    <div data-mdb-input-init class="form-outline m-4">
+      <label for="email">Votre email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="nom@domaine.com"
+      />
+    </div>
+      <button id="btnEnvoyerMail" data-mdb-ripple-init
+        type="button"
+        class="btn cta btn-block ms-4">S'inscrire</button>
+    
+    </form>
+  </div>
+</div>
+    <script src="popup_news.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"

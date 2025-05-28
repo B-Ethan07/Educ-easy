@@ -13,40 +13,66 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/style.css" />
-    <link rel="stylesheet" href="assets/popup.css">
-    <title>Document</title>
+    <title>Ecrire un article</title>
   </head>
-  <body></body>
-</html>
-<!-- Popup newsletter -->
-<div class="popupBackground">
-  <div class="popup_news">
-    <h4>S'inscrire à la newsletter</h4>
-    <form style="width: 26rem">
+  <body>
+    <nav
+      class="navbar sticky-top navbar-expand-sm shadow"
+      style="background-color: #ffffff"
+    >
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"
+          ><img
+            src="assets\images\logo.PNG"
+            alt="Logo"
+            width="40"
+            height="40"
+            class="d-inline-block align-text-top"
+        /></a>
 
-    <div data-mdb-input-init class="form-outline m-4">
-      <label for="nom">Votre nom:</label>
-      <input type="text" id="nom" name="nom" placeholder="Votre nom" />
-    </div>
-
-    <div data-mdb-input-init class="form-outline m-4">
-      <label for="email">Votre email:</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="nom@domaine.com"
-      />
-    </div>
-      <button id="btnEnvoyerMail" data-mdb-ripple-init
-        type="button"
-        class="btn cta btn-block ms-4">S'inscrire</button>
-    
-    </form>
-  </div>
-</div>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto sm-2 mb-lg-0">
+            <li class="titre"><strong>Educ'easy</strong></li>
+            <li class="nav-item">
+              <button type="button" class="ctaNav">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </button>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="ctaNav">
+                <a class="nav-link" href="article.html">Articles</a>
+              </button>
+            </li>
+            <li class="nav-item" id="addarticle">
+              <button type="button" class="ctaNav">
+                <a class="nav-link" href="popups.html"> + </a>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <section>
+        <h1>Articles</h1>
+      </section>
+    </header>
+<main>
 <!-- Popup Nouvel Article -->
-<div class="popupBackground">
+<section class="popupBackgroundArticle">
   <div class="popup_article">
     <h4>Nouvel Article</h4>
 
@@ -113,4 +139,28 @@
       </button>
     </form>
   </div>
-</div>
+</section>
+</main>
+    <footer>
+      <img src="assets\images\logo.PNG" alt="logo" width="40" height="40" />
+      <h6>CGU</h6>
+      <ul>
+        <li>
+          <button class="cta">
+            <img src="assets\images\facebook.svg" alt="facebook" />
+          </button>
+        </li>
+        <li>
+          <button class="cta">
+            <img src="assets\images\twitter.svg" alt="twitter" />
+          </button>
+        </li>
+        <li>
+          <button class="cta">
+            <img src="assets\images\linkedin.svg" alt="linkedin" />
+          </button>
+        </li>
+      </ul>
+    </footer>
+</body>
+</html>

@@ -101,6 +101,16 @@ footer > ul > li {
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: start;
 }
+.popupBackgroundArticle {
+    display: flex;
+}
+.popup_article {
+    background-color: antiquewhite;
+    padding: 4em;
+    border-radius: 20px;
+    margin: auto 25%;
+    width: 100%;
+}
 
 @media screen and (max-width: 575px) {
     .ctaNav  {
