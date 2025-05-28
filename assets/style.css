@@ -1,7 +1,9 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 :root {
     --border--wireframe: 1px solid black;
 }
@@ -40,7 +42,6 @@ header > section {
   background: linear-gradient( #fcbc33, #ff9317);
   border-radius: 10px;
   border: 0;
-  
  }
 .ctaNav {
   display: inline-block;
@@ -101,6 +102,17 @@ footer > ul > li {
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: start;
 }
+.popupBackgroundArticle {
+    display: flex;
+}
+.popup_article {
+    background-color: antiquewhite;
+    padding: 4em;
+    border-radius: 20px;
+    margin: auto 25%;
+    width: 100%;
+}
+
 
 @media screen and (max-width: 575px) {
     .ctaNav  {
@@ -119,5 +131,9 @@ footer > ul > li {
 }
 article{
     margin: 0 1em;
+}
+
+.popup_article {
+margin: 0 auto ;
 }
 }
