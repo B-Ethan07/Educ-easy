@@ -1,27 +1,26 @@
 
 function afficherPopup() {
     let popupBackground = document.querySelector(".popupBackground")
-    popupBackground.style.display="flex"
+    popupBackground.style.display = "flex";
 }
 
 function cacherPopup() {
     let popupBackground = document.querySelector(".popupBackground")
-    popupBackground.style.display="none"
+    popupBackground.style.display = "none"
 }
 
-
 function initAddEventListenerPopup() {
-    let btnPartage = document.getElementById("btnPartagee")
-    let popupBackground = document.querySelector(".popupBackground")
+    let btnPartage = document.querySelector("#btnPartagee")
+    let btnQuit = document.querySelector("#quit")
     btnPartage.addEventListener("click", () => {
         console.log('bouton cliquer')
         afficherPopup()
     })
 
-    popupBackground.addEventListener("click", (event) => {
-        if (event.target === popupBackground) {
+    btnQuit.addEventListener("click", () => {
             cacherPopup()
         }
-    })
+    )
 }
+initAddEventListenerPopup()
 
