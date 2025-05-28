@@ -70,7 +70,7 @@
     <header>
       <section>
         <h1 >Blog de conseil pour les parents</h1>
-        <button class="cta" id="btnPartage">Inscrivez vous à notre newsletter</button>
+        <button class="cta" id="btnPartagee">Inscrivez vous à notre newsletter</button>
       </section>
     </header>
     <main>
@@ -186,20 +186,21 @@
 <div class="popupBackground">
   <div class="popup_news">
     <h4>S'inscrire à la newsletter</h4>
-    <form style="width: 26rem">
+    <form>
 
     <div data-mdb-input-init class="form-outline m-4">
       <label for="nom">Votre nom:</label>
-      <input type="text" id="nom" name="nom" placeholder="Votre nom" />
+      <input type="text" id="nom" name="nom" placeholder="Votre nom" style="width: 10rem; height: 2rem;" />
     </div>
 
-    <div data-mdb-input-init class="form-outline m-4">
+    <div data-mdb-input-init class="form-outline m-2">
       <label for="email">Votre email:</label>
       <input
         type="email"
         id="email"
         name="email"
         placeholder="nom@domaine.com"
+        style="width: 15rem; height: 2rem;"
       />
     </div>
       <button id="btnEnvoyerMail" data-mdb-ripple-init

@@ -1,17 +1,17 @@
 
 function afficherPopup() {
     let popupBackground = document.querySelector(".popupBackground")
-    popupBackground.classList.add("active")
+    popupBackground.style.display="flex"
 }
 
 function cacherPopup() {
     let popupBackground = document.querySelector(".popupBackground")
-    popupBackground.classList.remove("active")
+    popupBackground.style.display="none"
 }
 
 
 function initAddEventListenerPopup() {
-    let btnPartage = document.querySelector("#btnPartage")
+    let btnPartage = document.getElementById("btnPartagee")
     let popupBackground = document.querySelector(".popupBackground")
     btnPartage.addEventListener("click", () => {
         console.log('bouton cliquer')
