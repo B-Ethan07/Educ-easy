@@ -79,7 +79,7 @@
             aria-label="Small select example"
           >
             <label for="filtre">Thèmes</label>
-            <option value="all" selected>Tous</option>
+            <option value="all" onclick="filterSelection('animals')" selected>Tous</option>
             <option value="activity">Activité</option>
             <option value="song">Chanson</option>
             <option value="health">Santé</option>
@@ -100,9 +100,9 @@
         </div>
       </nav>
         <article>    
-            <div class="row row-cols-1 row-cols-md-1 g-5 m-2">
+            <div id="myUL" class="row row-cols-1 row-cols-md-1 g-5 m-2">
             <div class="col">
-              <div class="card" data-theme="all activity">
+              <div class="card" data-theme="filterDiv all activity">
                 <img src="assets\images\peinture.jpg" class="card-img-top" alt="peinture bleu avec pinceau">
           
                 <div class="card-body shadow">
@@ -112,7 +112,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card" data-theme="all song">
+              <div class="card" data-theme="filterDiv all song">
                 <img src="assets\images\selfie.jpg" class="card-img-top" alt="selfie d'enfant à la plage">
           
                 <div class="card-body shadow">
@@ -122,7 +122,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card" data-theme="all activity">
+              <div class="card" data-theme="filterDiv all activity">
                 <img src="assets\images\pexels-daiangan-102127 (1).jpg" class="card-img-top" alt="palette de couleur">
           
                 <div class="card-body shadow">
@@ -132,7 +132,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card" data-theme="all health">
+              <div class="card" data-theme="filterDiv all health">
                 <img src="assets\images\pexels-padrinan-194094.jpg" class="card-img-top" alt="bateaux en papier origami">
           
                 <div class="card-body shadow">

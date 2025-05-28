@@ -1,36 +1,22 @@
-/*function filterArticle() {
+/*function myFunction() {
+  
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('searchbar');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  article = ul.querySelectorAll('.card');
 
-    articles.forEach(article => {
-        let theme = article.getAttribute("data-theme");
-        if (filtre==="all" || filtre===theme){
-            article.style.display= "block";
-        }else{
-            article.style.display="none"
-        }
-    })
-}
-filterArticle()
-let newArray="";
-for(const article of articles) {
-    if(filtre==='Tous'){
-        article.style.display= "block";
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < article.length; i++) {
+    a = article[i].getElementByAttribute("data-theme")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      article[i].style.display = "";
     } else {
-        newArray += article
+      article[i].style.display = "none";
     }
-}*/    
-let articles = document.querySelector('article')
-let filtre = document.getElementById('filtre')
+  }
+}myFunction()*/
 
-filtre.addEventListener('change', () => {
-    let article = articles.value
-    let items = document.querySelectorAll('.card')
-
-    items.forEach(item => {
-        const themeName= item.dataset.name
-        if(article==='all' || themeName===article){
-            item.style.display='';
-        } else {
-            item.style.display='none';
-        }
-    })
-})
+//????????????????????

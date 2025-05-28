@@ -132,4 +132,8 @@ footer > ul > li {
 article{
     margin: 0 1em;
 }
+
+.popup_article {
+margin: 0 auto ;
+}
 }
