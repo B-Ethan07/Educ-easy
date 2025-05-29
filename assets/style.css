@@ -97,7 +97,15 @@ footer > ul > li {
     text-decoration: none;
     display: flex;
     margin: 0 0.5rem;
+    justify-content: center;
+    align-items: center;
 }
+footer > ul > li > .cta {
+    padding: 1px 4px;
+    border-radius: px;
+}
+
+
 .card-text {
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: start;

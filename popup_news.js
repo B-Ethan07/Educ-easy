@@ -24,3 +24,12 @@ function initAddEventListenerPopup() {
 }
 initAddEventListenerPopup()
 
+/*function verifyMail() {
+    let email = document.querySelector('#email')
+    email.addEventListener("input", () => {
+    if(email===)
+    } else {
+}
+    )
+}
+*/
