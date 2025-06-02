@@ -1,4 +1,3 @@
-Educ'Easy
 Educ'Easy est une plateforme web dédiée à la création et à la diffusion d'articles informatifs et pédagogiques, spécialement conçus pour les parents de jeunes enfants. Rédigés par des éducateurs, ces articles visent à accompagner les parents dans leur quotidien éducatif.
 
 🧠 Objectif du projet
