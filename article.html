@@ -56,11 +56,6 @@
                 <a class="nav-link" href="article.html">Article</a>
               </button>
             </li>
-            <li class="nav-item" id="addarticle">
-              <button type="button" class="ctaNav">
-                <a class="nav-link" href="popups.html"> + </a>
-              </button>
-            </li>
           </ul>
         </div>
       </div>
@@ -102,51 +97,145 @@
         <article>    
             <div id="myUL" class="row row-cols-1 row-cols-md-1 g-5 m-2">
             <div class="col">
-              <div class="card" data-theme="filterDiv all activity">
+              <div class="card filterDiv all activity">
                 <img src="assets\images\peinture.jpg" class="card-img-top" alt="peinture bleu avec pinceau">
           
                 <div class="card-body shadow">
                   <h5 class="card-title">Article 1</h5>
-                  <p class="card-text">TLorem ipsum dolor sit amet consectetur. Sed maecenas a nunc senectus. Turpis at elit vitae risus metus. A vulputate nec lorem ut. Eu commodo euismod adipiscing donec amet risus nunc. </p>
+                  <p class="card-text"><strong>Auteur : </strong>Annon <br>
+                  <strong>Date :</strong> 13/06/2025<br><br>
+                  Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc senectus. Turpis at elit vitae risus metus. A vulputate nec lorem ut. Eu commodo euismod adipiscing donec amet risus nunc. </p>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card" data-theme="filterDiv all song">
+              <div class="card filterDiv all song">
                 <img src="assets\images\selfie.jpg" class="card-img-top" alt="selfie d'enfant à la plage">
           
                 <div class="card-body shadow">
                   <h5 class="card-title">Article 2</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc senectus. Turpis at elit vitae risus metus. A vulputate nec lorem ut. Eu commodo euismod adipiscing donec amet risus nunc. </p>
+                  <p class="card-text"><strong>Auteur : </strong>Annon <br>
+                  <strong>Date :</strong> 13/06/2025<br><br>
+                  Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc senectus. Turpis at elit vitae risus metus. A vulputate nec lorem ut. Eu commodo euismod adipiscing donec amet risus nunc. </p>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card" data-theme="filterDiv all activity">
+              <div class="card filterDiv all activity">
                 <img src="assets\images\pexels-daiangan-102127 (1).jpg" class="card-img-top" alt="palette de couleur">
           
                 <div class="card-body shadow">
                   <h5 class="card-title">Article 3</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc senectus. Turpis at elit vitae risus metus. A vulputate nec lorem ut. Eu commodo euismod adipiscing donec amet risus nunc.</p>
+                  <p class="card-text"><strong>Auteur : </strong>Annon <br>
+                  <strong>Date :</strong> 13/06/2025<br><br>
+                  Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc senectus. Turpis at elit vitae risus metus. A vulputate nec lorem ut. Eu commodo euismod adipiscing donec amet risus nunc.</p>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card" data-theme="filterDiv all health">
+              <div class="card filterDiv all health">
                 <img src="assets\images\pexels-padrinan-194094.jpg" class="card-img-top" alt="bateaux en papier origami">
           
                 <div class="card-body shadow">
                   <h5 class="card-title">Article 4</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc senectus. Turpis at elit vitae risus metus. A vulputate nec lorem ut. Eu commodo euismod adipiscing donec amet risus nunc.</p>
+                  <p class="card-text"><strong>Auteur : </strong>Annon <br>
+                  <strong>Date :</strong> 13/06/2025<br><br>
+                  Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc senectus. Turpis at elit vitae risus metus. A vulputate nec lorem ut. Eu commodo euismod adipiscing donec amet risus nunc.</p>
                 </div>
               </div>
             </div>
             </div>
           </article>
+          <!-- Popup Nouvel Article -->
+<section class="popupBackgroundArticle " >
+  <div class="popup_article container">
+    <h4 class="text-center mb-4">Nouvel Article</h4>
+
+    <form class="mx-auto w-100" style="max-width: 400px;">
+      <!-- Titre input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="titreArticle">Titre:</label>
+        <input
+          type="text"
+          id="titreArticle"
+          name="titreArticle"
+          placeholder="Titre de l'Article.."
+          class="form-control"
+        />
+      </div>
+
+      <!-- Auteur input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="auteur">Auteur:</label>
+        <input
+          type="auteur"
+          id="auteur"
+          name="auteur"
+          placeholder="Auteur.."
+          class="form-control"
+        />
+      </div>
+
+      <!-- Date input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="date">Date:</label>
+        <input
+          type="date"
+          name="date"
+          required
+          pattern="\d{4}-\d{2}-\d{2}"
+          class="form-control"
+        />
+      </div>
+            <!-- Theme input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="date">Theme:</label>
+          <select id="filtre"
+            class="form-select form-select-sm"
+            style="width: 100%"
+            aria-label="Small select example"
+          >
+            <label for="filtre">Thèmes</label>
+            <option value="all" onclick="filterSelection('tous')" selected>Tous</option>
+            <option value="activity">Activité</option>
+            <option value="song">Chanson</option>
+            <option value="health">Santé</option>
+            <option value="food">Alimentation</option>
+          </select>
+      </div>
+
+      <!-- Image -->
+      <div class="form-outline mb-4">
+        <label class="form-check-label" for="imagefile">
+          Votre image:
+        </label>
+        <input
+          type="file"
+          id="imagefile"
+          accept="jpg, png, svg"
+          class="form-control"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="contenuArticle" class="form-label" >Article: </label>
+        <textarea class="form-control" id="contenuArticle" placeholder="Ecrire ici.." rows="5" ></textarea>
+      </div>
+      <!-- Submit button -->
+      <button
+        data-mdb-ripple-init
+        type="button"
+        class="btn cta btn-block mb-4"
+        id="publierBtn"
+      >
+        Publier
+      </button>
+    </form>
+  </div>
+</section>
     </main>
     <footer>
       <img src="assets\images\logo.PNG" alt="logo" width="40" height="40" />
-      <h6>CGU</h6>
+      <h6>Mentions légales - CGU</h6>
       <ul>
         <li>
           <button class="cta">
@@ -166,6 +255,7 @@
       </ul>
     </footer>
     <script src="script.js"></script>
+    <script src="addArticle.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"

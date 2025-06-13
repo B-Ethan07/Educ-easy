@@ -50,6 +50,7 @@ header > section {
   border: 0;
   margin: 1rem, 0 ;
   box-shadow: 2px 1px 2px rgb(114, 114, 114);
+  padding: 0 1em;
  }
  .ctaNav:hover {
   background: linear-gradient(#ffaf02, #fd8a07);
@@ -75,44 +76,76 @@ section>h2 {
     margin: 1rem;
 }
 article{
-    margin: 0 3em;
+    margin: 0 6em;
 }
 footer{
     display: flex;
     justify-content: space-between;
-
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
     background-color: rgb(255, 255, 255);
     padding: 1rem;
     margin-top: 3rem;
     box-shadow: 0px 0px 10px 2px rgb(226, 226, 226);
 }
+footer > img {
+  width: 50px;
+  height: 50px;
+}
 footer > h6 {
-    margin-left: 7.5rem;
+    margin: 0;
+    font-size: 1rem;
 }
 footer > ul {
     display: flex;
     text-decoration: none;
+    gap: 0.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 footer > ul > li {
     text-decoration: none;
     display: flex;
-    margin: 0 0.5rem;
+    align-items: center;
 }
+
 .card-text {
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: start;
 }
+
 .popupBackgroundArticle {
     display: flex;
+    padding: 20px;
+    margin: 0 6em;
 }
 .popup_article {
     background-color: antiquewhite;
     padding: 4em;
     border-radius: 20px;
-    margin: auto 25%;
+    margin: auto 10%;
     width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
+footer > ul > li > .cta {
+  display: inline-flex;              
+  align-items: center;              
+  justify-content: center;          
+  background: linear-gradient(#fcbc33, #ff9317);
+  border-radius: 10px;
+  border: none;
+  padding: 0.5rem;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+footer > ul > li > .cta > img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  } 
 
 @media screen and (max-width: 575px) {
     .ctaNav  {
@@ -134,6 +167,22 @@ article{
 }
 
 .popup_article {
-margin: 0 auto ;
+padding: 20px 10px;
 }
+.popup_article form {
+ font-size: 0.95rem;
+    }
+
+footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+footer > ul {
+    justify-content: center;
+  }
+
+footer > h6 {
+    margin-left: 0;
+  }
 }

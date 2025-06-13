@@ -1,22 +1,14 @@
-/*function myFunction() {
-  
-  // Declare variables
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById('searchbar');
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  article = ul.querySelectorAll('.card');
+// fonctionnalité de filtre d'article 
 
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < article.length; i++) {
-    a = article[i].getElementByAttribute("data-theme")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      article[i].style.display = "";
+document.getElementById('filtre').addEventListener('change', function () {
+  const selected = this.value; // valeur sélectionnée
+  const articles = document.querySelectorAll('.card');
+
+  articles.forEach(article => {
+    if (selected === 'all' || article.classList.contains(selected)) {
+      article.parentElement.style.display = ''; // afficher le .col
     } else {
-      article[i].style.display = "none";
+      article.parentElement.style.display = 'none'; // cacher le .col
     }
-  }
-}myFunction()*/
-
-//????????????????????
+  });
+});
