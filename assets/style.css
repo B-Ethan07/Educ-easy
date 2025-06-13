@@ -76,7 +76,7 @@ section>h2 {
     margin: 1rem;
 }
 article{
-    margin: 0 3em;
+    margin: 0 6em;
 }
 footer{
     display: flex;
@@ -119,18 +119,19 @@ footer > ul > li {
 .popupBackgroundArticle {
     display: flex;
     padding: 20px;
+    margin: 0 6em;
 }
 .popup_article {
     background-color: antiquewhite;
     padding: 4em;
     border-radius: 20px;
-    margin: auto 25%;
+    margin: auto 10%;
     width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 footer > ul > li > .cta {
-  display: inline-flex;              /* ✅ Permet le centrage vertical et horizontal */
-  align-items: center;              /* ✅ Centre verticalement */
+  display: inline-flex;              
+  align-items: center;              
   justify-content: center;          
   background: linear-gradient(#fcbc33, #ff9317);
   border-radius: 10px;
