@@ -68,7 +68,7 @@
 
 <main>
 <!-- Popup Nouvel Article -->
-<section class="popupBackgroundArticle">
+<section class="popupBackgroundArticle mt-5" >
   <div class="popup_article">
     <h4>Nouvel Article</h4>
 
@@ -108,6 +108,22 @@
           class="form-control"
         />
       </div>
+            <!-- Theme input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="date">Theme:</label>
+          <select id="filtre"
+            class="form-select form-select-sm"
+            style="width: 100%"
+            aria-label="Small select example"
+          >
+            <label for="filtre">Thèmes</label>
+            <option value="all" onclick="filterSelection('animals')" selected>Tous</option>
+            <option value="activity">Activité</option>
+            <option value="song">Chanson</option>
+            <option value="health">Santé</option>
+            <option value="food">Alimentation</option>
+          </select>
+      </div>
 
       <!-- Image -->
       <div class="form-outline mb-4">
@@ -130,6 +146,7 @@
         data-mdb-ripple-init
         type="button"
         class="btn cta btn-block mb-4"
+        id="publierBtn"
       >
         Publier
       </button>
@@ -158,5 +175,6 @@
         </li>
       </ul>
     </footer>
+    <script src="addArticle.js"></script>
 </body>
 </html>

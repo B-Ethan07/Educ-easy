@@ -104,6 +104,7 @@ footer > ul > li {
 }
 .popupBackgroundArticle {
     display: flex;
+    padding: 20px;
 }
 .popup_article {
     background-color: antiquewhite;
@@ -111,6 +112,7 @@ footer > ul > li {
     border-radius: 20px;
     margin: auto 25%;
     width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -134,6 +136,9 @@ article{
 }
 
 .popup_article {
-margin: 0 auto ;
+padding: 20px 10px;
 }
+.popup_article form {
+ font-size: 0.95rem;
+    }
 }
