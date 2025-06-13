@@ -58,11 +58,7 @@
                 <a class="nav-link" href="article.html">Article</a>
               </button>
             </li>
-            <li class="nav-item" id="addarticle">
-              <button type="button" class="ctaNav">
-                <a class="nav-link" href="popups.html"> + </a>
-              </button>
-            </li>
+
           </ul>
         </div>
       </div>
@@ -185,30 +181,29 @@
     <!-- Popup newsletter -->
 <div class="popupBackground">
   <div class="popup_news">
-    <h4>S'inscrire à la newsletter</h4>
+    <h4 class="mb-4">S'inscrire à la newsletter</h4>
     <form>
 
-    <div data-mdb-input-init class="form-outline m-4">
+    <div data-mdb-input-init class="form-outline mb-3">
       <label for="nom">Votre nom:</label>
-      <input type="text" id="nom" name="nom" placeholder="Votre nom" style="width: 10rem; height: 2rem;" />
+      <input type="text" id="nom" name="nom" placeholder="Votre nom" />
     </div>
 
-    <div data-mdb-input-init class="form-outline m-2">
+    <div data-mdb-input-init class="form-outline mb-3">
       <label for="email">Votre email:</label>
       <input
         type="email"
         id="email"
         name="email"
         placeholder="nom@domaine.com"
-        style="width: 15rem; height: 2rem;"
       />
     </div>
       <button id="btnEnvoyerMail" data-mdb-ripple-init
         type="button"
-        class="btn cta btn-block ms-4">S'inscrire</button>
+        class="btn btn-primary">S'inscrire</button>
       <button id="quit" data-mdb-ripple-init
         type="button"
-        class="btn cta btn-block ms-4">Fermer</button>
+        class="btn btn-danger">Fermer</button>
     </form>
   </div>
 </div>
