@@ -131,7 +131,7 @@ footer > ul > li {
 footer > ul > li > .cta {
   display: inline-flex;              /* ✅ Permet le centrage vertical et horizontal */
   align-items: center;              /* ✅ Centre verticalement */
-  justify-content: center;          /* ✅ Centre horizontalement */
+  justify-content: center;          
   background: linear-gradient(#fcbc33, #ff9317);
   border-radius: 10px;
   border: none;
