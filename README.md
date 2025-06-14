@@ -1,32 +1,27 @@
-Educ'Easy est une plateforme web dédiée à la création et à la diffusion d'articles informatifs et pédagogiques, spécialement conçus pour les parents de jeunes enfants. Rédigés par des éducateurs, ces articles visent à accompagner les parents dans leur quotidien éducatif.
+# 🎓 Educ-easy
 
-🧠 Objectif du projet
-Ce projet a pour but de fournir aux parents des ressources fiables et accessibles, rédigées par des professionnels de l'éducation, afin de les soutenir dans l'éducation de leurs enfants.
+**Educ-easy** est une plateforme web dédiée à la création et à la diffusion d'articles éducatifs et informatifs rédigés par des éducateurs, à destination des parents de jeunes enfants.
 
-📦 Technologies utilisées
-HTML5 : Structure du contenu
+---
 
-CSS3 : Mise en forme et design
+## 📌 Objectif
 
-JavaScript : Interactivité et fonctionnalités dynamiques
+L’objectif d’Educ-easy est de fournir des ressources fiables, pratiques et facilement accessibles pour aider les parents dans l’accompagnement éducatif de leurs enfants.
 
-🚀 Installation
-Clonez ce repository sur votre machine locale :
+---
 
-bash
-Copier
-Modifier
+## 🛠️ Technologies utilisées
+
+- ✅ **HTML5** — structure du contenu
+- ✅ **CSS3** — mise en page et design
+- ✅ **JavaScript** — interactivité et logique côté client
+
+---
+
+## 🚀 Installation
+
+1. Clonez le repository :
+
+```bash
 git clone https://github.com/B-Ethan07/Educ-easy.git
-Ouvrez ensuite le fichier index.html dans votre navigateur pour accéder à la plateforme.
 
-🧪 Fonctionnalités
-Création d'articles personnalisés
-
-Interface intuitive et responsive
-
-Contenu pédagogique validé par des éducateurs
-
-📸 Aperçu
-
-📄 Licence
-Ce projet est sous licence MIT. Consultez le fichier LICENSE pour plus de détails.
