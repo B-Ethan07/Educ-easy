@@ -23,20 +23,12 @@ To create a simple and user-friendly blog platform focused on sharing parenting 
 
 ## 📂 Project Structure
 
-├── index.php # Homepage with latest articles
-├── article.php # Full article list with filtering and search
-├── create.php # Article submission form
-├── config.php # Database connection setup (PDO)
-├── addArticle.js # JavaScript for filtering and searching
-├── assets/
-│ ├── css/
-│ │ ├── style.css
-│ │ └── popup.css
-│ ├── js/
-│ │ ├── script.js
-│ │ └── popup_news.js
-│ └── images/
-│ └── logo.PNG and social media icons
+├── index.php →   Accueil avec aperçu des derniers articles
+├── article.php →   Liste complète avec filtres/thèmes
+├── create.php →   Formulaire de soumission d’article
+├── assets/ →   CSS, JS, images
+├── config.php →   Connexion PDO à la base de données
+└── addArticle.js →   Logique JS pour le filtrage/recherche
 
 ## ✅ What I've Built
 
