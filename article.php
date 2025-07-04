@@ -14,7 +14,7 @@ $articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Salsa&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
   <title>Educ'easy</title>
 </head>
 <body>
@@ -24,15 +24,15 @@ $articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">
-        <img src="assets/images/logo.PNG" alt="Logo" width="40" height="40" class="d-inline-block align-text-top" />
+      <a class="navbar-brand" href="index.php">
+        <img src="assets/css/images/logo.PNG" alt="Logo" width="40" height="40" class="d-inline-block align-text-top" />
       </a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="titre"><strong>Educ'easy</strong></li>
           <li class="nav-item">
             <button class="ctaNav">
-              <a class="nav-link active" href="index.html">Home</a>
+              <a class="nav-link active" href="index.php">Home</a>
             </button>
           </li>
             <li class="nav-item">
@@ -120,17 +120,17 @@ $articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   <!-- FOOTER -->
   <footer>
-    <img src="assets/images/logo.PNG" alt="logo" width="40" height="40" />
+    <img src="assets/css/images/logo.PNG" alt="logo" width="40" height="40" />
     <h6>Mentions légales - CGU</h6>
     <ul>
-      <li><button class="cta"><img src="assets/images/facebook.svg" alt="facebook" /></button></li>
-      <li><button class="cta"><img src="assets/images/twitter.svg" alt="twitter" /></button></li>
-      <li><button class="cta"><img src="assets/images/linkedin.svg" alt="linkedin" /></button></li>
+      <li><button class="cta"><img src="assets/css/images/facebook.svg" alt="facebook" /></button></li>
+      <li><button class="cta"><img src="assets/css/images/twitter.svg" alt="twitter" /></button></li>
+      <li><button class="cta"><img src="assets/css/images/linkedin.svg" alt="linkedin" /></button></li>
     </ul>
   </footer>
 
   <!-- SCRIPTS -->
-  <script src="script.js"></script>
+  <script src="assets/js/script.js"></script>
   <script src="addArticle.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>

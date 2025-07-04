@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <nav
@@ -93,9 +93,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="index.php"
           ><img
-            src="assets\images\logo.PNG"
+            src="assets\css\images\logo.PNG"
             alt="Logo"
             width="40"
             height="40"
@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav me-auto sm-2 mb-lg-0">
-            <li class="titre"><strong>STORY</strong></li>
+            <li class="titre"><strong>EDUC'EASY</strong></li>
             <li class="nav-item">
               <button type="button" class="ctaNav">
                 <a class="nav-link active" aria-current="page" href="index.php"
@@ -127,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </div>
     </nav>
     <main>
-  <h1 style= "text-align: center" class="mb-4">Créer une histoire</h1>
+  <h1 style= "text-align: center" class="mb-4 mt-4">Créer une histoire</h1>
         <form method="POST" action="create.php" enctype="multipart/form-data" class="mx-auto w-100" style="max-width: 400px;">
 
       <!-- Titre input -->
@@ -216,22 +216,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
         </main>
     <footer>
-      <img src="assets\images\logo.PNG" alt="logo" width="40" height="40" />
+      <img src="assets\css\images\logo.PNG" alt="logo" width="40" height="40" />
       <h6>Mentions légales - CGU</h6>
       <ul>
         <li>
           <button class="cta">
-            <img src="assets\images\facebook.svg" alt="facebook" />
+            <img src="assets\css\images\facebook.svg" alt="facebook" />
           </button>
         </li>
         <li>
           <button class="cta">
-            <img src="assets\images\twitter.svg" alt="twitter" />
+            <img src="assets\css\images\twitter.svg" alt="twitter" />
           </button>
         </li>
         <li>
           <button class="cta">
-            <img src="assets\images\linkedin.svg" alt="linkedin" />
+            <img src="assets\css\images\linkedin.svg" alt="linkedin" />
           </button>
         </li>
       </ul>

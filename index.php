@@ -1,3 +1,16 @@
+<?php
+require 'config.php';
+
+$pdo = new PDO(DSN, USER, PASS);
+$stmt = $pdo->query("SELECT * FROM Story ORDER BY date DESC LIMIT 4");
+$articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$formatter = new IntlDateFormatter('fr_FR', IntlDateFormatter::LONG, IntlDateFormatter::NONE);
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,8 +26,8 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="assets/style.css" />
-    <link rel="stylesheet" href="assets/popup.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/popup.css">
     <title>Educ'easy</title>
   </head>
   <body>
@@ -34,9 +47,9 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="index.php"
           ><img
-            src="assets\images\logo.PNG"
+            src="assets\css\images\logo.PNG"
             alt="Logo"
             width="40"
             height="40"
@@ -48,7 +61,7 @@
             <li class="titre"><strong>Educ'easy</strong></li>
             <li class="nav-item">
               <button type="button" class="ctaNav">
-                <a class="nav-link active" aria-current="page" href="index.html"
+                <a class="nav-link active" aria-current="page" href="index.php"
                   >Home</a
                 >
               </button>
@@ -74,110 +87,60 @@
       </section>
     </header>
     <main>
-      <section>
-        <h2><strong>Articles</strong></h2>
-        <article>
-          <div class="row row-cols-1 row-cols-md-2 g-5 m-2">
-            <div class="col">
-              <div class="card">
-                <img
-                  src="assets\images\peinture.jpg"
-                  class="card-img-top"
-                  alt="peinture et pinceau bleu"
-                />
+<section>
+  <h2><strong>Articles</strong></h2>
+  <article>
+    <div class="row row-cols-1 row-cols-md-2 g-5 m-2">
+      <?php foreach ($articles as $article): ?>
+        <?php
+          $image = $article['image']
+            ? 'data:image/jpeg;base64,' . base64_encode($article['image'])
+            : 'assets/images/default.jpg';
 
-                <div class="card-body shadow">
-                  <h5 class="card-title">Article 1</h5>
-                  <p class="card-text">
-                    TLorem ipsum dolor sit amet consectetur. Sed maecenas a nunc
-                    senectus. Turpis at elit vitae risus metus. A vulputate nec
-                    lorem ut. Eu commodo euismod adipiscing donec amet risus
-                    nunc.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img
-                  src="assets\images\selfie.jpg"
-                  class="card-img-top"
-                  alt="selfie d'une petite fille à la plage"
-                />
-
-                <div class="card-body shadow">
-                  <h5 class="card-title">Article 2</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc
-                    senectus. Turpis at elit vitae risus metus. A vulputate nec
-                    lorem ut. Eu commodo euismod adipiscing donec amet risus
-                    nunc.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img
-                  src="assets\images\pexels-daiangan-102127 (1).jpg"
-                  class="card-img-top"
-                  alt="palette de couleur"
-                />
-
-                <div class="card-body shadow">
-                  <h5 class="card-title">Article 3</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc
-                    senectus. Turpis at elit vitae risus metus. A vulputate nec
-                    lorem ut. Eu commodo euismod adipiscing donec amet risus
-                    nunc.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img
-                  src="assets\images\pexels-padrinan-194094.jpg"
-                  class="card-img-top"
-                  alt="bateaux en papier origami"
-                />
-
-                <div class="card-body shadow">
-                  <h5 class="card-title">Article 4</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur. Sed maecenas a nunc
-                    senectus. Turpis at elit vitae risus metus. A vulputate nec
-                    lorem ut. Eu commodo euismod adipiscing donec amet risus
-                    nunc.
-                  </p>
-                </div>
-              </div>
+          $title = htmlspecialchars($article['title']);
+          $author = htmlspecialchars($article['author']);
+          $dateObj = new DateTime($article['date']);
+          $formattedDate = $formatter->format($dateObj);
+          $content = nl2br(htmlspecialchars($article['content']));
+        ?>
+        <div class="col">
+          <div class="card">
+            <img src="<?= $image ?>" class="card-img-top" alt="image" />
+            <div class="card-body shadow">
+              <h5 class="card-title"><?= $title ?></h5>
+              <p class="card-text">
+                <strong>Auteur :</strong> <?= $author ?><br>
+                <strong>Date :</strong> <?= $formattedDate ?><br><br>
+                <?= $content ?>
+              </p>
             </div>
           </div>
-        </article>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </article>
         <button class="cta">
-          <a class="nav-link" href="article.html"> More </a>
+          <a class="nav-link" href="article.php"> More </a>
         </button>
       </section>
     </main>
     <footer>
-      <img src="assets\images\logo.PNG" alt="logo" width="40" height="40" />
+      <img src="assets\css\images\logo.PNG" alt="logo" width="40" height="40" />
       <h6>Mentions légales - CGU</h6>
       <ul>
         <li>
           <button class="cta">
-            <img src="assets\images\facebook.svg" alt="facebook" />
+            <img src="assets\css\images\facebook.svg" alt="facebook" />
           </button>
         </li>
         <li>
           <button class="cta">
-            <img src="assets\images\twitter.svg" alt="twitter" />
+            <img src="assets\css\images\twitter.svg" alt="twitter" />
           </button>
         </li>
         <li>
           <button class="cta">
-            <img src="assets\images\linkedin.svg" alt="linkedin" />
+            <img src="assets\css\images\linkedin.svg" alt="linkedin" />
           </button>
         </li>
       </ul>
@@ -211,8 +174,8 @@
     </form>
   </div>
 </div>
-    <script src="popup_news.js"></script>
-    <script src="addArticle.js"></script>
+    <script src="assets/js/popup_news.js"></script>
+    <script src="assets/js/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
