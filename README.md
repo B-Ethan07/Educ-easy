@@ -21,14 +21,6 @@ To create a simple and user-friendly blog platform focused on sharing parenting 
 - **Database**: MySQL
 - **Language**: 🇫🇷 Dates are formatted using `IntlDateFormatter` in French
 
-## 📂 Project Structure
-
-├── index.php →   Accueil avec aperçu des derniers articles
-├── article.php →   Liste complète avec filtres/thèmes
-├── create.php →   Formulaire de soumission d’article
-├── assets/ →   CSS, JS, images
-├── config.php →   Connexion PDO à la base de données
-└── addArticle.js →   Logique JS pour le filtrage/recherche
 
 ## ✅ What I've Built
 
