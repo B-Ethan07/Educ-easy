@@ -37,6 +37,12 @@ Créer une plateforme simple et ergonomique de type blog, centrée sur l’écha
 - Intégration responsive avec **Bootstrap**
 - Sécurisation des entrées utilisateur (`htmlspecialchars`, `nl2br`, validation côté serveur)
 
+## 🔧 Prochaines évolutions prévues
+
+- Ajout des fonctionnalités **Update** (modifier un article) et **Delete** (supprimer un article)
+- Mise en place d’un **espace administrateur**
+- Envoi réel des mails pour la newsletter
+
 ---
 
 > Projet personnel réalisé dans un objectif d’apprentissage PHP et de mise en pratique concrète de mes compétences web.
