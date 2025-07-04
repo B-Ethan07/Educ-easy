@@ -1,49 +1,62 @@
 # 📚 Educ'easy
 
-**Educ'easy** est un blog de conseils pour les parents, leur proposant des articles autour de l’éducation, la santé, l’alimentation, les activités ou les chansons pour enfants. Le site permet aussi aux utilisateurs d’écrire et publier leurs propres contenus.
+**Educ'easy** is a blog designed for parents, offering advice and articles related to parenting, health, food, activities, and songs for children. Users can also write and publish their own content through a simple form.
 
-## 🎯 Objectif du projet
+## 🎯 Project Goal
 
-Créer une plateforme simple et ergonomique de type blog, centrée sur l’échange d’expériences et de recommandations parentales.
+To create a simple and user-friendly blog platform focused on sharing parenting experiences and recommendations.
 
-## 🛠️ Fonctionnalités principales
+## 🛠️ Main Features
 
-- 🏠 **Page d'accueil** : affichage des 4 derniers articles publiés
-- 📄 **Page Articles** : consultation de tous les articles avec filtres par thème et barre de recherche
-- ✍️ **Page de création d'article** : formulaire de soumission d’un article (titre, auteur, thème, image, contenu)
-- 📬 **Popup Newsletter** : système d’inscription à une newsletter
-- 📸 **Gestion d’images** : image uploadée et stockée dans la base de données (format binaire)
+- 🏠 **Homepage**: Displays the 4 most recent articles
+- 📄 **Articles Page**: Browse all articles with category filtering and search functionality
+- ✍️ **Create Page**: Submit a new article with title, author, theme, image, and content
+- 📬 **Newsletter Popup**: Allows users to subscribe to the newsletter
+- 📸 **Image Handling**: Uploaded images are stored in the database as binary data
 
-## 🧰 Stack technique
+## 🧰 Tech Stack
 
-- **Frontend** : HTML5, CSS3, Bootstrap, JavaScript
-- **Backend** : PHP (avec PDO pour la base de données)
-- **Base de données** : MySQL
-- **Langue** : 🇫🇷 Formatage des dates avec `IntlDateFormatter`
+- **Frontend**: HTML5, CSS3, Bootstrap, JavaScript
+- **Backend**: PHP (with PDO for database interaction)
+- **Database**: MySQL
+- **Language**: 🇫🇷 Dates are formatted using `IntlDateFormatter` in French
 
-## 📂 Architecture simplifiée
+## 📂 Project Structure
 
-├── index.php        → Accueil avec aperçu des derniers articles
-├── article.php      → Liste complète avec filtres/thèmes
-├── create.php       → Formulaire de soumission d’article
-├── assets/          → CSS, JS, images
-├── config.php       → Connexion PDO à la base de données
-└── addArticle.js    → Logique JS pour le filtrage/recherche
+├── index.php # Homepage with latest articles
+├── article.php # Full article list with filtering and search
+├── create.php # Article submission form
+├── config.php # Database connection setup (PDO)
+├── addArticle.js # JavaScript for filtering and searching
+├── assets/
+│ ├── css/
+│ │ ├── style.css
+│ │ └── popup.css
+│ ├── js/
+│ │ ├── script.js
+│ │ └── popup_news.js
+│ └── images/
+│ └── logo.PNG and social media icons
 
-## ✅ Ce que j’ai réalisé
+## ✅ What I've Built
 
-- Développement **full-stack** du site (frontend + backend)
-- Création d’un système **CRUD** sans framework
-- Intégration responsive avec **Bootstrap**
-- Sécurisation des entrées utilisateur (`htmlspecialchars`, `nl2br`, validation côté serveur)
+- Full-stack development of the site (frontend + backend)
+- A partial **CRUD** system:  
+  - ✅ **Create**: article submission  
+  - ✅ **Read**: article display on homepage and list page  
+- Responsive integration with **Bootstrap**
+- Basic security for user inputs using `htmlspecialchars`, `nl2br`, and server-side validation
 
-## 🔧 Prochaines évolutions prévues
+## 🔧 Upcoming Improvements
 
-- Ajout des fonctionnalités **Update** (modifier un article) et **Delete** (supprimer un article)
-- Mise en place d’un **espace administrateur**
-- Envoi réel des mails pour la newsletter
+- Add full **CRUD** by implementing:
+  - 🔄 **Update**: Edit an existing article
+  - ❌ **Delete**: Remove an article
+- Create an **admin dashboard**
+- Implement real **email sending** for newsletter subscriptions
 
 ---
 
-> Projet personnel réalisé dans un objectif d’apprentissage PHP et de mise en pratique concrète de mes compétences web.
+> This project was built as a personal learning exercise to practice PHP and apply full-stack development concepts.
+
 
