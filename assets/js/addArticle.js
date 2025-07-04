@@ -1,4 +1,4 @@
-// Sélection des éléments du formulaire
+/* // Sélection des éléments du formulaire
 const boutonPublier = document.getElementById("publierBtn");
 const titreInput = document.getElementById("titreArticle");
 const auteurInput = document.getElementById("auteur");
@@ -72,4 +72,4 @@ boutonPublier.addEventListener("click", function () {
     imageInput.value = "";
     contenuTextarea.value = "";
   }
-});
+}); */
