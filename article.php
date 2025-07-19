@@ -20,34 +20,52 @@ $articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
   <!-- NAVBAR -->
   <nav class="navbar sticky-top navbar-expand-sm shadow" style="background-color: #ffffff">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="index.php">
-        <img src="assets/css/images/logo.PNG" alt="Logo" width="40" height="40" class="d-inline-block align-text-top" />
-      </a>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="titre"><strong>Educ'easy</strong></li>
-          <li class="nav-item">
-            <button class="ctaNav">
-              <a class="nav-link active" href="index.php">Home</a>
-            </button>
-          </li>
-            <li class="nav-item">
-              <button type="button" class="ctaNav">
-                <a class="nav-link" href="article.php">Article</a>
-              </button>
-            </li>
-            <li class="nav-item">
-              <button type="button" class="ctaNav">
-                <a class="nav-link" href="create.php">Ecrire</a>
-              </button>
-            </li>
-        </ul>
+      <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="index.php">
+              <img src="assets/css/images/logo.PNG" alt="Logo" width="40" height="40" class="d-inline-block align-text-top" />
+          </a>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <ul class="navbar-nav me-auto sm-2 mb-lg-0">
+                  <li class="titre"><strong>Educ'easy</strong></li>
+                  <li class="nav-item">
+                      <button type="button" class="ctaNav">
+                          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                      </button>
+                  </li>
+                  <li class="nav-item">
+                      <button type="button" class="ctaNav">
+                          <a class="nav-link" href="article.php">Article</a>
+                      </button>
+                  </li>
+
+                  <?php if (isset($_SESSION['username'])): ?>
+                      <li class="nav-item">
+                          <button type="button" class="ctaNav">
+                              <a class="nav-link" href="create.php">Ecrire</a>
+                          </button>
+                      </li>
+                  <?php endif; ?>
+              </ul>
+
+              <!-- Zone de droite : connexion / déconnexion -->
+              <div class="nav-item d-flex gap-2">
+                  <?php if (isset($_SESSION['username'])): ?>
+                      <span class="navbar-text me-2">Bonjour, <?= htmlspecialchars($_SESSION['username']) ?> !</span>
+                      <button type="button" class="ctaNav">
+                          <a class="nav-link" href="logout.php">Logout</a>
+                      </button>
+                  <?php else: ?>
+                      <button type="button" class="ctaNav auth">
+                          <a class="nav-link" href="login.php">Login</a>
+                      </button>
+                  <?php endif; ?>
+              </div>
+          </div>
       </div>
-    </div>
   </nav>
 
   <!-- HEADER -->
@@ -119,15 +137,28 @@ $articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </main>
 
   <!-- FOOTER -->
-  <footer>
-    <img src="assets/css/images/logo.PNG" alt="logo" width="40" height="40" />
-    <h6>Mentions légales - CGU</h6>
-    <ul>
-      <li><button class="cta"><img src="assets/css/images/facebook.svg" alt="facebook" /></button></li>
-      <li><button class="cta"><img src="assets/css/images/twitter.svg" alt="twitter" /></button></li>
-      <li><button class="cta"><img src="assets/css/images/linkedin.svg" alt="linkedin" /></button></li>
-    </ul>
-  </footer>
+<footer>
+  <img src="assets/css/images/logo.PNG" alt="logo" width="40" height="40" />
+  <h6>Mentions légales - CGU</h6>
+  <ul style="list-style: none; padding-left: 0; display: flex; gap: 10px;">
+    <li>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <img src="assets/css/images/facebook.svg" alt="facebook" width="20" height="0" />
+      </a>
+    </li>
+    <li>
+      <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+        <img src="assets/css/images/twitter.svg" alt="twitter" width="20" height="20" />
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+        <img src="assets/css/images/linkedin.svg" alt="linkedin" width="20" height="20" />
+      </a>
+    </li>
+  </ul>
+</footer>
+
 
   <!-- SCRIPTS -->
   <script src="assets/js/script.js"></script>

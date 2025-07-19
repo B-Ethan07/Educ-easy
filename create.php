@@ -1,4 +1,11 @@
 <?php
+
+session_start();
+if (!isset($_SESSION['username'])) {
+    header('Location: login.php');
+    exit;
+}
+
 $errors = [];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titre = trim($_POST['titreArticle'] ?? '');
@@ -126,9 +133,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
       </div>
     </nav>
-    <main>
-  <h1 style= "text-align: center" class="mb-4 mt-4">Créer une histoire</h1>
-        <form method="POST" action="create.php" enctype="multipart/form-data" class="mx-auto w-100" style="max-width: 400px;">
+    <main class="container mt-5 mb-5" style="max-width: 450px;">
+  <h1 style= "text-align: center" class="text-center mb-4">Créer une histoire</h1>
+        <form method="POST" action="create.php" class="shadow p-4 rounded" enctype="multipart/form-data" class="mx-auto w-100" style="background-color: 
+#fee9c6;">
 
       <!-- Titre input -->
       <div data-mdb-input-init class="form-outline mb-4">
@@ -215,26 +223,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </button>
     </form>
         </main>
-    <footer>
-      <img src="assets\css\images\logo.PNG" alt="logo" width="40" height="40" />
-      <h6>Mentions légales - CGU</h6>
-      <ul>
-        <li>
-          <button class="cta">
-            <img src="assets\css\images\facebook.svg" alt="facebook" />
-          </button>
-        </li>
-        <li>
-          <button class="cta">
-            <img src="assets\css\images\twitter.svg" alt="twitter" />
-          </button>
-        </li>
-        <li>
-          <button class="cta">
-            <img src="assets\css\images\linkedin.svg" alt="linkedin" />
-          </button>
-        </li>
-      </ul>
-    </footer>
+  <!-- FOOTER -->
+<footer>
+  <img src="assets/css/images/logo.PNG" alt="logo" width="40" height="40" />
+  <h6>Mentions légales - CGU</h6>
+  <ul style="list-style: none; padding-left: 0; display: flex; gap: 10px;">
+    <li>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <img src="assets/css/images/facebook.svg" alt="facebook" width="20" height="20" />
+      </a>
+    </li>
+    <li>
+      <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+        <img src="assets/css/images/twitter.svg" alt="twitter" width="20" height="20" />
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+        <img src="assets/css/images/linkedin.svg" alt="linkedin" width="20" height="20" />
+      </a>
+    </li>
+  </ul>
+</footer>
 </body>
 </html>
