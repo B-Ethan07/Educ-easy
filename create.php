@@ -134,7 +134,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </div>
     </nav>
     <main class="container mt-5 mb-5" style="max-width: 450px;">
-  <h1 style= "text-align: center" class="text-center mb-4">Créer une histoire</h1>
+  <h1 style= "text-align: center" class="text-center mb-4">Créer un article</h1>
         <form method="POST" action="create.php" class="shadow p-4 rounded" enctype="multipart/form-data" class="mx-auto w-100" style="background-color: 
 #fee9c6;">
 
