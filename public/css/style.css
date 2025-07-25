@@ -17,11 +17,13 @@
 body {
     margin: 0;
     line-height: 1.5;
-    font-family: "Salsa", cursive;
+    font-family: 'Quicksand', sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #fffaf5;
 }
+
 
 main {
     flex: 1;
@@ -36,32 +38,81 @@ main {
 .titre {
     margin-top: 1.2rem;
     margin-right: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.ctaNav {
+    background: var(--primary-gradient);
+    border: none;
+    color: var(--btn-text-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--btn-radius);
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.ctaNav:hover {
+    background: var(--hover-gradient);
+    transform: translateY(-2px);
 }
 
 /* HEADER */
 header {
-    background-image: url(./images/palette1.PNG);
-    color: rgba(255, 255, 255, 0.973);
+    background-image: url("../images/palette1.PNG");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
     border: 1px solid #ddd;
-    text-shadow: 1px 2px 5px rgb(192, 192, 192);
     width: 100%;
     height: 15rem;
     margin: 0.5rem 0;
     box-shadow: 2px 1px 2px rgb(192, 192, 192);
-}
-
-header > section {
-    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 1rem;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-/* ✅ Boutons globaux */
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.cta {
+    background: var(--primary-gradient);
+    color: var(--btn-text-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--btn-radius);
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: var(--btn-shadow);
+    transition: all 0.3s ease;
+}
+
+.cta:hover {
+    background: var(--hover-gradient);
+    transform: translateY(-3px);
+}
+
 .cta,
 .ctaNav {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background: var(--primary-gradient);
+    font-family: Nunito, sans-serif !important;
     color: var(--btn-text-color);
     border: none;
     border-radius: var(--btn-radius);
@@ -233,13 +284,36 @@ footer > ul > li a img {
 }
 
 /* ✅ Responsive */
-@media screen and (max-width: 575px) {
-    .cta,
+@media screen and (max-width: 775px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .ctaNav {
-        width: 100%;
-        max-width: 250px;
-        margin: 5px auto;
+        width: 90%;
+        margin: 8px 0;
         padding: 12px;
+        display: block;
+        text-align: center;
+        background: var(--primary-gradient);
+        color: var(--btn-text-color);
+        border: none;
+        border-radius: var(--btn-radius);
+        box-shadow: var(--btn-shadow);
+        font-weight: 600;
+    }
+
+    .ctaNav a {
+        color: white !important;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
     }
 
     .titre {
