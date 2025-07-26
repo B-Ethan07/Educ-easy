@@ -4,10 +4,11 @@ namespace App\Controllers;
 
 require_once __DIR__ . '/../Model/Article.php';
 require_once __DIR__ . '/../Model/Comment.php';
-require_once __DIR__ . '/../Model/Comment.php';
 
+use MongoDB\BSON\ObjectId;
 use App\Model\Article;
-use App\Models\Comment;
+use App\Model\Comment;
+use MongoDB\BSON\UTCDateTime;
 use PDO;
 
 class ArticleController
@@ -64,14 +65,13 @@ class ArticleController
 
             if ($success) {
                 $_SESSION['success'] = "Article publié avec succès.";
-                header('Location: index.php?action=article');
+                header('Location: index.php?action=home');
                 exit;
             } else {
                 $_SESSION['error'] = "Erreur lors de la publication.";
             }
         }
 
-        // Formulaire de création d'article
         require __DIR__ . '/../View/Article/createArticle.php';
     }
 
@@ -87,37 +87,37 @@ class ArticleController
     /**
      * Affiche un seul article par ID + ses commentaires
      */
-    public function show($id)
+    public function show(string $id)
     {
-        if (!$id || !is_numeric($id)) {
-            $_SESSION['error'] = "ID invalide.";
-            header("Location: index.php?action=home");
-            exit;
-        }
-
-        $article = $this->articleModel->showStory((int)$id);
+        $article = $this->articleModel->showStory($id);
 
         if (!$article) {
-            $_SESSION['error'] = "Article non trouvé.";
+            $_SESSION['error'] = "Article introuvable.";
             header("Location: index.php?action=home");
             exit;
         }
 
-        // Gérer l'ajout de commentaire
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['comment'])) {
-            $userId = $_SESSION['user']['id'] ?? null;
-            $content = trim($_POST['content'] ?? '');
+        $commentModel = new Comment();
 
-            if ($userId && !empty($content)) {
-                $this->commentModel->addComment((int)$id, $userId, $content);
-                header("Location: index.php?action=un_article&id=" . $id);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['comment'])) {
+            $auteur = $_SESSION['user']['firstname'] ?? 'Anonyme';
+            $content = $_POST['comment_content'] ?? '';
+
+            if (!empty($content)) {
+                $commentModel->addComment([
+                    'article_id' => $id, // int ici, pas ObjectId
+                    'auteur'     => $auteur,
+                    'content'    => $content,
+                    'created_at' => new UTCDateTime()
+                ]);
+                header("Location: index.php?action=unArticle&id=$id");
                 exit;
             }
         }
 
-        $comments = $this->commentModel->getCommentsByArticleId((int)$id);
+        $comments = $commentModel->getCommentsByArticleId($id);
 
-        require __DIR__ . '/../View/Article/unArticle.php';
+        require_once __DIR__ . '/../View/Article/unArticle.php';
     }
 
 }

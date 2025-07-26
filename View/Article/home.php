@@ -27,7 +27,7 @@
                     $contentRaw = strip_tags($article['content'] ?? '');
                     $excerpt = strlen($contentRaw) > 150 ? substr($contentRaw, 0, 150) . '...' : $contentRaw;
 
-                    $articleId = (int)($article['id'] ?? 0);
+                    $articleId = (string)($article['id'] ?? '');
                     ?>
                     <div class="col">
                         <div class="card h-100 shadow-sm">
