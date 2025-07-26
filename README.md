@@ -1,6 +1,6 @@
 # Educ'easy
 
-Educ'easy is a blog for parents, sharing tips and articles on parenting, health, food, activities, and children’s songs. Users can also write and publish their own posts.
+**Educ'easy** is a blog for parents, sharing tips and articles on parenting, health, food, activities, and children’s songs. Users can also write and publish their own posts.
 
 ## Project Overview
 
@@ -15,14 +15,15 @@ A simple, responsive platform encouraging parents to share experiences and educa
 - Only logged-in users can publish  
 - Newsletter subscription popup  
 - Image uploads saved in the database  
+- MongoDB used for the comment section  
 - Responsive design with Bootstrap  
 - Basic security: input validation, password hashing, and session protection  
 
 ## Tech Stack
 
-| Frontend           | Backend      | Database |
-|--------------------|--------------|----------|
-| HTML5, CSS3, Bootstrap 5 | PHP (PDO)    | MySQL    |
+| Frontend                 | Backend             | Database           |
+|--------------------------|---------------------|--------------------|
+| HTML5, CSS3, Bootstrap 5 |PHP(POO, PDO + MVC)  | MySQL + MongoDB    |
 
 *Dates formatted for French locale*
 
@@ -35,7 +36,6 @@ A simple, responsive platform encouraging parents to share experiences and educa
 
 ## Future Improvements
 
-- Use MongoDB for comments (NoSQL)  
 - Complete CRUD features (edit, delete)  
 - Build admin dashboard with role management using Symfony  
 - Add real email support for newsletter  
@@ -43,3 +43,4 @@ A simple, responsive platform encouraging parents to share experiences and educa
 ---
 
 This project is a personal learning experience focused on MVC structure, OOP, and full-stack PHP development.
+
