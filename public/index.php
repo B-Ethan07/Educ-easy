@@ -1,11 +1,14 @@
 <?php
+
 session_start();
 
 require __DIR__ . "/../View/header.php";
 
 require_once __DIR__ . "/../Config/Database.php";
+require_once __DIR__ . "/../Config/Mongo.php";
 require_once __DIR__ . "/../Controller/UserController.php";
 require_once __DIR__ . "/../Controller/ArticleController.php";
+
 
 use App\Controllers\UserController;
 use App\Controllers\ArticleController;
@@ -37,12 +40,12 @@ switch ($action) {
         break;
 
     case 'unArticle':
-        $id = isset($_GET['id']) ? (int)$_GET['id'] : null;
+        $id = $_GET['id'] ?? null;
         if ($id) {
             $articleController->show($id);
         } else {
             $_SESSION['error'] = "Article invalide.";
-            header('Location: index.php');
+            header('Location: index.php?action=home');
             exit;
         }
         break;

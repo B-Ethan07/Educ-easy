@@ -33,39 +33,42 @@
     <h3 class="mb-4 border-bottom pb-2">Commentaires</h3>
 
     <?php if (count($comments) === 0): ?>
-        <p class="text-muted fst-italic">Aucun commentaire pour le moment.</p>
+    <p class="text-muted fst-italic">Aucun commentaire pour le moment.</p>
     <?php else: ?>
-        <?php foreach ($comments as $comment): ?>
-            <div class="comment mb-4 p-3 border rounded shadow-sm bg-light">
-                <p class="mb-1">
-                    <strong><?= htmlspecialchars($comment['author_name']) ?></strong>
-                    <small class="text-muted">(<?= (new DateTime($comment['created_at']))->format('d/m/Y H:i') ?>)</small>
-                </p>
-                <p class="mb-0" style="white-space: pre-wrap;"><?= nl2br(htmlspecialchars($comment['content'])) ?></p>
-            </div>
-        <?php endforeach; ?>
+    <?php foreach ($comments as $comment): ?>
+    <div class="comment mb-4 p-3 border rounded shadow-sm bg-light">
+        <p class="mb-1">
+            <strong><?= isset($comment->author) && $comment->author !== 'Anonyme'
+                    ? htmlspecialchars($comment->author)
+                    : ($_SESSION['user']['username'] ?? 'Anonyme') ?></strong>
+            <small class="text-muted">
+                (<?= $comment['created_at']->toDateTime()->format('d/m/Y H:i') ?>)
+            </small>
+        </p>
+        <p class="mb-0" style="white-space: pre-wrap;"><?= nl2br(htmlspecialchars($comment['content'])) ?></p>
+    </div>
+    <?php endforeach; ?>
     <?php endif; ?>
 
     <?php if (isset($_SESSION['user'])): ?>
-        <!-- Formulaire -->
-        <form method="POST" action="" class="mt-4">
-            <div class="mb-3" style="max-width: 700px; margin: 0 auto;">
-                <label for="comment_content" class="form-label fw-semibold">Ajouter un commentaire :</label>
-                <textarea
-                        name="comment_content"
-                        id="comment_content"
-                        class="form-control"
-                        placeholder="Votre commentaire ici..."
-                        rows="4"
-                        style="min-height: 120px; resize: vertical;"
-                        required
-                ></textarea>
-            </div>
-            <div class="text-center">
-                <button type="submit" name="comment" class="btn btn-primary">Envoyer</button>
-            </div>
-        </form>
-
+    <!-- Formulaire -->
+    <form method="POST" action="" class="mt-4">
+        <div class="mb-3" style="max-width: 700px; margin: 0 auto;">
+            <label for="comment_content" class="form-label fw-semibold">Ajouter un commentaire :</label>
+            <textarea
+                    name="comment_content"
+                    id="comment_content"
+                    class="form-control"
+                    placeholder="Votre commentaire ici..."
+                    rows="4"
+                    style="min-height: 120px; resize: vertical;"
+                    required
+            ></textarea>
+        </div>
+        <div class="text-center">
+            <button type="submit" name="comment" class="btn btn-primary">Envoyer</button>
+        </div>
+    </form>
     <?php else: ?>
         <p class="mt-4"><a href="?action=login" class="text-decoration-none">Connectez-vous</a> pour laisser un commentaire.</p>
     <?php endif; ?>
