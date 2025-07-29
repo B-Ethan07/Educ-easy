@@ -1,3 +1,14 @@
 /vendor/
 /.idea/
 /config/
+vcs.xml
+/.vscode/
+/.DS_Store
+/.env
+/.env.local
+/.env.*.local  
+vcs.xml
+Educ-easy.iml
+modules.xml
+php.xml
+

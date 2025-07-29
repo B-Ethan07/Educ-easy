@@ -22,29 +22,33 @@
 <!-- Popup newsletter -->
 <div class="popupBackground">
     <div class="popup_news">
-        <h4 class="mb-4">S'inscrire à la newsletter</h4>
+        <button id="quit" class="close-btn" type="button" aria-label="Fermer">×</button>
+        
+        <div class="newsletter-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+            </svg>
+        </div>
+
+        <h3>Restez informé !</h3>
+        <p>Recevez nos meilleurs conseils et actualités directement dans votre boîte mail.</p>
+
         <form>
-
-            <div data-mdb-input-init class="form-outline mb-3">
-                <label for="nom">Votre nom:</label>
-                <input type="text" id="nom" name="nom" placeholder="Votre nom" />
+            <div class="form-group">
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
             </div>
 
-            <div data-mdb-input-init class="form-outline mb-3">
-                <label for="email">Votre email:</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="nom@domaine.com"
-                />
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="votre@email.com" required />
             </div>
-            <button id="btnEnvoyerMail" data-mdb-ripple-init
-                    type="button"
-                    class="btn btn-primary">S'inscrire</button>
-            <button id="quit" data-mdb-ripple-init
-                    type="button"
-                    class="btn btn-danger">Fermer</button>
+
+            <button id="btnEnvoyerMail" type="button">Rejoindre la newsletter</button>
+
+            <div class="terms">
+                En vous inscrivant, vous acceptez de recevoir nos newsletters. 
+                <a href="#">Voir notre politique de confidentialité</a>
+            </div>
         </form>
     </div>
 </div>
